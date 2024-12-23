@@ -1,1 +1,27 @@
-LIMPIM D+ DA CONTA SÔ
+<main class="header">
+  <header class="header-info">
+    <h1 class="header-info-title">Lucas Guimarães de Oliveira</h1>
+    <h2 class="header-info-description">Programador</h2>
+    <h2 class="header-info-description">Escritor</h2>
+  </header>
+  <section class="header-category"></section>
+</main>
+<section #bcrypt class="bcrypt">
+  <h2>BCrypt</h2>
+  <div class="bcrypt-input">
+    <label for="password">Salt:</label>
+    <input type="number" id="salt" [formControl]="saltControl" />
+  </div>
+
+  <div class="bcrypt-input">
+    <label for="salt">Senha:</label>
+    <input type="text" id="password" [formControl]="passwordControl" />
+    <div>{{ passwordHash$ | async }}</div>
+  </div>
+
+  <div class="bcrypt-input">
+    <label for="hash">Hash:</label>
+    <input type="text" id="hash" [formControl]="hashControl" />
+    <div>{{ hashConclusion$ | async }}</div>
+  </div>
+</section>
